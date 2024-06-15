@@ -7,10 +7,6 @@ import { useLoadingStore } from '@/stores/loading';
 const loadingStore = useLoadingStore();
 onBeforeMount(async () => {
   try {
-    loadingStore.setIsLoading(true);
-    const data = await getDailyActivities();
-    activities.value = data;
-    loadingStore.setIsLoading(false);
   } catch (error) {
     
   }
